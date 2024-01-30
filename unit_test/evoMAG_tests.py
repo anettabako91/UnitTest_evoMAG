@@ -45,7 +45,6 @@ class TestAlerts(unittest.TestCase):
         self.search_product_CSS('Smartwatch Huawei')
         # self.driver.find_element(By.CSS_SELECTOR, 'input.sn-suggest-input').send_keys('Smartwatch Huawei')  # search for huawei smartwatch
         # self.driver.find_element(By.CSS_SELECTOR, '.submit-search').click()
-        self.driver.implicitly_wait(5)
         product_list_container = self.driver.find_element(By.CSS_SELECTOR, "div.product_grid")  # the grid with all products found
         products = product_list_container.find_elements(By.CSS_SELECTOR, ".npi_name")  # the name of the products found - a list of them
         print(f'we found {len(products)} products')  # print the lenght of the products list
@@ -56,7 +55,6 @@ class TestAlerts(unittest.TestCase):
         self.search_product_CSS('Smartwatch Huawei')
         # self.driver.find_element(By.CSS_SELECTOR, 'input.sn-suggest-input').send_keys('Smartwatch Huawei')  # search for huawei smartwatch
         # self.driver.find_element(By.CSS_SELECTOR, '.submit-search').click()
-        self.driver.implicitly_wait(5)
         product_list_container = self.driver.find_element(By.CSS_SELECTOR, "div.product_grid")  # the grid with all products found
         prices = product_list_container.find_elements(By.CSS_SELECTOR,"span.real_price")  # the price of the products found
         price = []  # create an empty list
@@ -78,14 +76,12 @@ class TestAlerts(unittest.TestCase):
         self.search_product_CSS('ondulator')
         # self.driver.find_element(By.CSS_SELECTOR, 'input.sn-suggest-input').send_keys('ondulator')  # search for huawei smartwatch
         # self.driver.find_element(By.CSS_SELECTOR, '.submit-search').click()
-        self.driver.implicitly_wait(5)
         self.driver.find_element(By.CSS_SELECTOR, '#c19jYXRlZ29yeSYjMzRPbmR1bGF0b2FyZSYjMzQ_').click()
-        self.driver.implicitly_wait(5)
         action = ActionChains(self.driver)
         elem1 = self.driver.find_element(By.CSS_SELECTOR, '#sn-slider-min')
         elem2 = self.driver.find_element(By.CSS_SELECTOR, '#sn-slider-max')
         action.drag_and_drop_by_offset(elem2, -140, 0).perform()  # in this way we can move the right side slider in left hand way
-        time.sleep(5)
+        # time.sleep(5)
         product_list_container = self.driver.find_element(By.CSS_SELECTOR, "div.product_grid")
         prices = product_list_container.find_elements(By.CSS_SELECTOR, "span.real_price")  # the price of the products found
         price = []  # create an empty list
@@ -124,8 +120,7 @@ class TestAlerts(unittest.TestCase):
                     pret_convertit_float = float(pret)  # convert the prices in float
                     price.append(pret_convertit_float)  # add them to the price list
             except ValueError:
-                print(
-                    f'error at the conversion of value: {element.text}')  # print this message if there is an error in converting a value
+                print(f'error at the conversion of value: {element.text}')  # print this message if there is an error in converting a value
 
         print(f'prices are: {price}')  # print all prices
         sorted_list = sorted(price)  # arrange the elements of the list in ascending order
