@@ -22,9 +22,9 @@ class TestSuite(unittest.TestCase):
             ])
 
             runner = HtmlTestRunner.HTMLTestRunner(
-                combine_reports=True, #trebuie acest rand daca vrem sa genereze un singur raport, nu mai multe fisiere separat
-                report_title='TestReport', #asta va aparea sus
-                report_name='Smoke Test Result' #numele fisierului care va fi generat
+                combine_reports=True,
+                report_title='TestReport',
+                report_name='Smoke Test Result'
             )
 
             runner.run(test_de_rulat)
