@@ -108,15 +108,15 @@ test_add_to_your_cart()
 
 ## Unit test
 
-After creating the different tests, I created the unit_test directory in which I grouped the tests according to the tested functionalities, and I created a class for each group :
+After creating the different tests, I created the unit_test directory in which I grouped the tests according to the tested functionalities, and I created a class for each group : \
    [test_cart](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/test_cart.py) - tests related to adding products to the cart, change quantity - here I need to mention that this tests will only
-   work if the searched products are still available at the moment the tests are running
-   [test_filter_and_order](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/test_filter_and_order.py) - filtering the products - ascending and descending order, mininmum price
-   [test_login](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/test_login.py) - tests for login with wrong emmail, or wrong format email
+   work if the searched products are still available at the moment the tests are running \
+   [test_filter_and_order](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/test_filter_and_order.py) - filtering the products - ascending and descending order, mininmum price \
+   [test_login](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/test_login.py) - tests for login with wrong emmail, or wrong format email \
    [test_page_and_title_check](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/test_page_and_title_check.py) - test to check if I entered the correct website, and test to get the title of 
-   the website
+   the website \
    [test_search_product](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/test_search_product.py) - tests with CSS and XPATH selectors to search some products, and verify if I get a correct
-   error message if I am searching a product that is not available
+   error message if I am searching a product that is not available 
 
 Inside each class I have defined a SetUp and TearDown method - accessing the evomag.ro website, accepting cookies and exiting the site at the end of each test:
 ``` python
@@ -150,9 +150,9 @@ After running the tests, I got a [report](https://github.com/anettabako91/UnitTe
 and all of them passed. The answers received to some tests (like print the mininum price, print prices in ascending/descending order, etc) also appear in the report, and you can see them bellow:
 ![responses for some tests](https://github.com/anettabako91/UnitTest_evoMAG/blob/main/unit_test/Screenshot%202024-02-07%20120302.png)
 
-Links to the entire project:
-[CSS_Selectors](https://github.com/anettabako91/Selectors_Test-Evomag/blob/main/tests/tests_with_CSS_selectors.py) 
-[XPATH_Selectors](https://github.com/anettabako91/Selectors_Test-Evomag/blob/main/tests/tests_with_XPATH_selectors.py)
+Links to the entire project: \
+[CSS_Selectors](https://github.com/anettabako91/Selectors_Test-Evomag/blob/main/tests/tests_with_CSS_selectors.py) \
+[XPATH_Selectors](https://github.com/anettabako91/Selectors_Test-Evomag/blob/main/tests/tests_with_XPATH_selectors.py) \
 [unit tests, test suite and report](https://github.com/anettabako91/UnitTest_evoMAG/tree/main/unit_test)
 
 
