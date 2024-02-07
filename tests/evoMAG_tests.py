@@ -3,12 +3,11 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.by import By
 
 
-class TestAlerts(unittest.TestCase):
+class TestEvoMAG(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -115,7 +114,7 @@ class TestAlerts(unittest.TestCase):
 
         for element in prices:
             try:
-                pret = element.text[:-4].replace('.', '').replace(',','.').strip()  # [::-4] -> to cut 'Lei' , first replace to cut the ., second replace to change the ',' to '.'
+                pret = element.text[:-4].replace('.', '').replace(',','.').strip()  # [:-4] -> to cut 'Lei' , first replace to cut the ., second replace to change the ',' to '.'
                 if pret != 'N/A':
                     pret_convertit_float = float(pret)  # convert the prices in float
                     price.append(pret_convertit_float)  # add them to the price list
